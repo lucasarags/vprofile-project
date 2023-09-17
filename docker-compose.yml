@@ -3,14 +3,14 @@ services:
   vprodb:
     build:
       context: ./Docker-files/db
-    image: lucasaragao/vprofiledb
+    image: ${DB_IMAGE}
     container_name: vprodb
     ports:
       - "3306:3306"
     volumes:
       - vprodbdata:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD=vprodbpass
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
 
   vprocache01:
     image: memcached
@@ -22,13 +22,13 @@ services:
     ports:
       - "15672:15672"
     environment:
-      - RABBITMQ_DEFAULT_USER=guest
-      - RABBITMQ_DEFAULT_PASS=guest
+       - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+       - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
 
   vproapp:
     build:
       context: ./Docker-files/app
-    image: lucasaragao/vprofileapp
+    image: ${APP_IMAGE}
     container_name: vproapp
     ports:
       - "8080:8080"
@@ -38,7 +38,7 @@ services:
   vproweb:
     build:
       context: ./Docker-files/web
-    image: lucasaragao/vprofileweb
+    image: ${WEB_IMAGE}
     container_name: vproweb
     ports:
       - "80:80"

@@ -1,24 +1,39 @@
-## Prerequisites
-- JDK 1.8 or later
-- Maven 3 or later
-- MySQL 5.6 or later
-######
-## Technologies 
-- Spring MVC
-- Spring Security
-- Spring Data JPA
-- Maven
-- JSP
-- MySQL
-## Database
-Here,we used Mysql DB 
-MSQL DB Installation Steps for Linux ubuntu 14.04:
-- $ sudo apt-get update
-- $ sudo apt-get install mysql-server
+## Passo a Passo para Rodar a Aplicação Localmente
 
-Then look for the file :
-- /src/main/resources/accountsdb
-- accountsdb.sql file is a mysql dump file.we have to import this dump to mysql db server
-- > mysql -u <user_name> -p accounts < accountsdb.sql
+Clone o repositório do projeto para o seu sistema local:
+
+    git clone <URL_do_Repositório>
+
+Navegue até o diretório do projeto:
+
+    cd <Nome_do_Diretório_do_Projeto>
+
+Crie as imagens e os conteineres
+
+    docker compose -f docker-compose.yml up
+
+## Navegando Pelo Seu Navegador do Browser
+
+Digite o seguinte URL na barra de endereços:
+
+    http://localhost:8080
+
+A aplicação deve ser carregada e você poderá interagir com ela através do navegador.
+
+Certifique-se de que a porta 8080 seja a porta correta em que a aplicação está sendo executada. Se a aplicação estiver configurada para usar uma porta diferente, substitua 8080 pelo número da porta correto.
+
+## Testando Seu Projeto
+
+Senha para acessar sua conta:
+
+    usuário: admin_vp
+    senha: admin_vp
+
+Ao logar faça os seguintes testes, para ter certeza que os conteineres estão se comunicando e funcionando:
+
+    - Clique em ALL USERS, depois escolha um dos user ID, ao clicar uma mensagem pedindo para retornar aparecerá, clique em BACK e clique novamente no mesmo ID. Se você recebeu uma mensagem com novos dados, o banco de dados está funcionando.
+
+Retorne para sua conta de login
+    - Clique em RABBITMQ, se a mensagem "Generated 2 Connections 6; Chanels 1 Exchage and 2 Que" apareceu em sua tela, o mesmo está em correto funcionamento.
 
 
