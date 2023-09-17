@@ -27,16 +27,19 @@ Certifique-se de que a porta 8080 seja a porta correta em que a aplicação est�
 Senha para acessar sua conta:
 
 usuário: 
-- admin_vp
+
+    admin_vp
+    
 senha: 
-- admin_vp
+
+    admin_vp
 
 Ao logar faça os seguintes testes, para ter certeza que os conteineres estão se comunicando e funcionando:
 
-    Clique em ALL USERS, depois escolha um dos user ID, ao clicar uma mensagem pedindo para retornar aparecerá, clique em BACK e clique novamente no mesmo ID. Se você recebeu uma mensagem com novos dados, o banco de dados está funcionando.
+- Clique em ALL USERS, depois escolha um dos user ID, ao clicar uma mensagem pedindo para retornar aparecerá, clique em BACK e clique novamente no mesmo ID. Se você recebeu uma mensagem com novos dados, o banco de dados está funcionando.
 
 Retorne para sua conta de login
 
-    Clique em RABBITMQ, se a mensagem "Generated 2 Connections 6; Chanels 1 Exchage and 2 Que" apareceu em sua tela, o mesmo está em correto funcionamento.
+- Clique em RABBITMQ, se a mensagem "Generated 2 Connections 6; Chanels 1 Exchage and 2 Que" apareceu em sua tela, o mesmo está em correto funcionamento.
 
 
