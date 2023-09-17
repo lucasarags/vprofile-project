@@ -26,8 +26,10 @@ Certifique-se de que a porta 8080 seja a porta correta em que a aplicação est�
 
 Senha para acessar sua conta:
 
-    usuário: admin_vp
-    senha: admin_vp
+usuário: 
+- admin_vp
+senha: 
+- admin_vp
 
 Ao logar faça os seguintes testes, para ter certeza que os conteineres estão se comunicando e funcionando:
 
